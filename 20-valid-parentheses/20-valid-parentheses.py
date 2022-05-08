@@ -13,7 +13,5 @@ class Solution:
                 return False
         if len(mylist) == 0:
             return True
-        else:
-            return False
-
+        
         
