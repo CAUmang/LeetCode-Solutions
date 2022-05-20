@@ -14,7 +14,7 @@ class Solution:
         k=0
         if short > 0:
             
-            for n in range(500):
+            for n in range(401):
                 if short == 0:
                     common = ""
                     return common
