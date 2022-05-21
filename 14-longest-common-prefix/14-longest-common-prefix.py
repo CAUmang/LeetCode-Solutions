@@ -8,7 +8,7 @@ class Solution:
             minimum_length = min(minimum_length, len(s))
         if not minimum_length:
             return ""
-        mini_str = min(strs)
+        mini_str = min(strs, key=len)
         longest_prefix = 0
         flag = False
         for i in range(minimum_length):
@@ -16,13 +16,10 @@ class Solution:
             for j in range(n):
                 curr = strs[j]
                 if curr[i] != ith_letter:
-                    flag = True
-                    break
-            if flag:
-                break
-            else:
-                longest_prefix += 1
-        return mini_str[:longest_prefix]
+                    return mini_str[:i]
+            if i+1 == minimum_length:
+                return mini_str
+                
                 
     
     
